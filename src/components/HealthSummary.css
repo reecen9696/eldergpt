@@ -1,0 +1,29 @@
+/* Progress Line Styling */
+/* Progress Wrapper for the Status Box */
+
+
+/* Progress Line around the purple box */
+/* Progress Line around the purple box */
+.progress-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-sizing: border-box;
+    border: 4px solid transparent; /* Increase border thickness here */
+    border-top-color: #6A5DFF;
+    border-right-color: #6A5DFF;
+    border-bottom-color: #6A5DFF;
+    border-left-color: #6A5DFF;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+    background: none;
+    pointer-events: none; /* Ensure it doesn't interfere with interactions */
+}
+  
+  /* Ensure the progress-line respects the progress percentage */
+.progress-line {
+    clip-path: inset(0 0 0 calc(100% - var(--progress)));
+  }
+
